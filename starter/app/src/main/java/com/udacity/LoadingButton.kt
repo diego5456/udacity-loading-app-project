@@ -81,7 +81,7 @@ class LoadingButton @JvmOverloads constructor(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        paint.color = backgroundColor
+        paint.color = context.getColor(R.color.button_color)
         canvas.drawRect(0f, 0f, widthSize, heightSize, paint)
         val textX = widthSize * 0.5f
         val textY = heightSize * 0.5f + textOffset
@@ -90,6 +90,8 @@ class LoadingButton @JvmOverloads constructor(
             val loadingWidth = widthSize * progress
             canvas.drawRect(0f, 0f, loadingWidth, heightSize, paint)
             textPaint.color = context.getColor(R.color.white)
+        } else{
+            textPaint.color = context.getColor(R.color.black)
         }
         var textLength = textPaint.measureText(textButton, 0, textButton.length - 1)
         val left = (textX + textLength) - 50f

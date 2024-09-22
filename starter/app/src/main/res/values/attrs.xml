@@ -3,6 +3,7 @@
     <declare-styleable name="LoadingButton">
         <attr name="button_text" format="string" />
         <attr name="button_color" format="color" />
+        <attr name="button_text_color" format="color" />
         <attr name="button_loading_color" format="color" />
         <attr name="button_loading_text" format="string" />
     </declare-styleable>
